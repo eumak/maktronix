@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
@@ -22,26 +21,28 @@ header {
 
 nav {
     display: flex;
-    justify-content: flex-end;
-    justify-content: center;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add padding for better spacing */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin-right: auto;
+    display: flex;
+    justify-content: center; /* Center the links */
+    flex-grow: 1; /* Allow ul to grow and push hamburger to the right */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 20px; /* Space out links */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     text-transform: capitalize;
-    padding: 40px 30px;
+    padding: 10px 20px; /* Adjust padding for better touch targets */
 }
 
 nav ul li a:hover {
@@ -54,18 +55,13 @@ main {
 
 footer {
     text-align: center;
-    padding: 0px;
+    padding: 10px;
     background-color: #333;
     color: white;
     position: relative;
     bottom: 0;
     width: 100%;
 }
-
-
-
-
-
 
 /* Hamburger Menu */
 .hamburger {
