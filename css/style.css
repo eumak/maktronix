@@ -22,12 +22,14 @@ header {
 
 nav {
     display: flex;
+    justify-content: flex-end;
     justify-content: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin-right: auto;
 }
 
 nav ul li {
@@ -58,4 +60,45 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+
+
+
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 60px; /* Position below the header */
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 10px 30px;
+    }
+
+    nav ul.active {
+        display: flex; /* Show links when active */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space out links vertically */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+    }
 }

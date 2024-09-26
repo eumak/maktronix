@@ -11,7 +11,10 @@
     <body>
         <header>
             <nav>
-                <ul>
+                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                    &#9776; <!-- Hamburger icon -->
+                </div>
+                <ul id="nav-links">
                     <li><a href="#" onclick="loadPage('welcome')">Welcome</a></li>
                     <li><a href="#" onclick="loadPage('whyus')">Why Choose Us</a></li>
                     <li><a href="#" onclick="loadPage('services')">Our Services</a></li>
