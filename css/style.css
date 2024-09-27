@@ -16,6 +16,10 @@ header {
 }
 
 #main {
+    width: 100%;
+    margin: auto;
+    max-width: 800px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
     flex: 1; /* Takes up available space */
 }
 
@@ -71,7 +75,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 878px) {
     nav ul {
         display: none; /* Hide links by default */
         flex-direction: column;
