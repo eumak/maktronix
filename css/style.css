@@ -1,12 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box; 
+}
+
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    width: 100%;
+    font-size: 16px;
 }
+
+.spinnaker-regular {
+    font-family: "Spinnaker", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 header {
     background-color: #333;
@@ -17,7 +31,17 @@ header {
 
 main p {
     text-align: justify;
+    margin-top: 0px;
 }
+
+main a {
+    text-decoration: none;
+}
+
+main .more {
+    text-align: center;
+    font-size: small;
+} 
 
 p {
     line-height: 1.5;
@@ -36,6 +60,7 @@ p {
     flex: 1; /* Takes up available space */
     background-color: #ebe9e9da;
     margin-top: -250px;
+    border-radius: 10px;
 }
 
 #whyus ul {
@@ -47,6 +72,7 @@ nav {
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
     padding: 10px 20px; /* Add padding for better spacing */
+    z-index: 10000;
 }
 
 nav ul {
@@ -77,6 +103,37 @@ main {
     color: #1a1a1a;
 }
 
+.card {
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all 0.5s ease-in-out;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
+}
+
+.card h4 {
+    margin: 0 0 5px 25px;
+}
+
+.card hr {
+    border: 0;
+    height: 2px;
+    background: #320a72;
+    margin: -16px 0 10px 0;
+    width: 15px;
+}
+
 footer {
     text-align: center;
     padding: 10px;
@@ -95,7 +152,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 878px) {
+@media (max-width: 1300px) {
     nav ul {
         display: none; /* Hide links by default */
         flex-direction: column;
@@ -120,5 +177,10 @@ footer {
 
     .hamburger {
         display: block; /* Show the hamburger menu */
+    }
+
+    #main {
+        margin: auto;
+        margin-top: 0;
     }
 }
