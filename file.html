@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Div Overlap</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .image-container {
+            position: relative;
+            /* Make this container relative for absolute positioning */
+            width: 100%;
+            /* Adjust as needed */
+            max-width: 800px;
+            /* Max width for the container */
+        }
+
+        .background-image {
+            width: 100%;
+            /* Make image responsive */
+            height: auto;
+            width: 1000px;
+            /* Maintain aspect ratio */
+        }
+
+        .overlay {
+            position: absolute;
+            /* Position the div absolutely */
+            top: 50%;
+            /* Center vertically */
+            left: 50%;
+            /* Center horizontally */
+            transform: translate(-50%, -50%);
+            /* Center the overlay */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            color: white;
+            /* Text color */
+            padding: 20px;
+            /* Padding around text */
+            border-radius: 8px;
+            /* Optional: rounded corners */
+            text-align: center;
+            /* Center the text */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="images/laptop office.jpeg" alt="Example Image" class="background-image">
+        <div class="overlay">
+            <h2>Your Overlay Content</h2>
+            <p>This content overlaps the image.</p>
+        </div>
+    </div>
+</body>
+
+</html>

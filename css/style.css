@@ -15,12 +15,31 @@ header {
     width: 100%;
 }
 
+main p {
+    text-align: justify;
+}
+
+p {
+    line-height: 1.5;
+    font-size: large;
+}
+
+.header-background {
+    max-width: 1500px;;
+}
+
 #main {
     width: 100%;
-    margin: auto;
-    max-width: 800px;
+    margin-left: 35%;
+    max-width: 850px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
     flex: 1; /* Takes up available space */
+    background-color: #ebe9e9da;
+    margin-top: -250px;
+}
+
+#whyus ul {
+    list-style-type: square;
 }
 
 nav {
@@ -55,6 +74,7 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
+    color: #1a1a1a;
 }
 
 footer {
