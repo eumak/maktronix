@@ -5,32 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional IT Consulting Services">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/menu.js" defer></script>
     <title>Maktronix Consultants</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-                &#9776; <!-- Hamburger icon -->
-            </div>
-            <ul id="nav-links">
-                <li><a href="#" onclick="loadPage('welcome')">Welcome</a></li>
-                <li><a href="#" onclick="loadPage('whyus')">Why Choose Us</a></li>
-                <li><a href="#" onclick="loadPage('services')">Our Services</a></li>
-                <li><a href="#" onclick="loadPage('industry')">Industries</a></li>
-                <li><a href="#" onclick="loadPage('contact')">Contact Us</a></li>
-            </ul>
-        </nav>
+        <menu-component></menu-component>
     </header>
-    <img src="images/laptop office.jpeg" alt="" class="header-background">
+    <!--img src="images/laptop office.jpeg" alt="" class="header-background"-->
     <div id="main">
         <main id="welcome">
-            <h1>Empowering Your Business Through Tailored Technological Solutions</h1>
+            <h1 class="animate-text">Unleash Your Business Potential with Tailored Tech</h1>
             <h2>Value Propositions</h2>
             <!--p>At Maktronix, we research, plan, and execute tailored strategies for each client, ensuring a value-driven technological evolution of your core business. Our approach focuses on understanding your unique challenges and opportunities, allowing us to implement innovative solutions that drive growth, enhance efficiency, and improve overall performance.</p-->
             <p>As Maktronix, we are committed to researching, planning, and executing tailored strategies designed
@@ -132,67 +122,77 @@
             </ul>
         </main>
         <main id="services">
-            <h1>Our Services</h1>
-            <p>At Maktronix, we provide a wide range of IT consulting and solutions tailored to your specific needs. Our
-                services are designed to enhance your business operations and drive growth.</p>
-            <div class="card">
-                <h4>Software Engineering</h4>
-                <hr />
-                <p>We design and develop robust, scalable, and high-performance software tailored to your business
-                    needs. Our team utilizes modern technologies and best practices to create solutions that drive
-                    efficiency and innovation.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+            <div class="menuhdr">
+                <h1>Our Services</h1>
+                <p>At Maktronix, we provide a wide range of IT consulting and solutions tailored to your specific needs.
+                    Our services are designed to enhance your business operations and drive growth.</p>
+            </div>
+            <div class="divshzrntl">
+                <div class="card">
+                    <h4>Software Engineering</h4>
+                    <hr />
+                    <p>We design and develop robust, scalable, and high-performance software tailored to your business
+                        needs. Our team utilizes modern technologies and best practices to create solutions that drive
+                        efficiency and innovation.</p>
+                    <div class="more">
+                        <a href="#" onclick="loadPage('sedetail')">Read More...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Business & System Analysis</h4>
+                    <hr />
+                    <p>Our expert analysts collaborate with you to understand your business requirements, identify
+                        challenges, and provide actionable insights. We ensure that every system we develop is aligned
+                        with
+                        your strategic goals.</p>
+                    <div class="more">
+                        <a href="#" onclick="loadPage('badetail')">Read More...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Business Process Management</h4>
+                    <hr />
+                    <p>We streamline your operations by optimizing business processes, enabling you to reduce costs,
+                        increase efficiency, and improve overall performance. Our BPM solutions are designed to help you
+                        stay agile and competitive.</p>
+                    <div class="more">
+                        <a href="#" onclick="loadPage('bpmdetail')">Read More...</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h4>Business & System Analysis</h4>
-                <hr />
-                <p>Our expert analysts collaborate with you to understand your business requirements, identify
-                    challenges, and provide actionable insights. We ensure that every system we develop is aligned with
-                    your strategic goals.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+            <div class="divshzrntl">
+                <div class="card">
+                    <h4>Data Engineering & Analytics</h4>
+                    <hr />
+                    <p>Maktronix empowers your business by turning data into actionable insights. We design and
+                        implement
+                        data pipelines, analytics platforms, and reporting tools that help you make data-driven
+                        decisions to
+                        fuel growth and innovation.</p>
+                    <div class="more">
+                        <a href="#" onclick="loadPage('dedetail')">Read More...</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <h4>Business Process Management</h4>
-                <hr />
-                <p>We streamline your operations by optimizing business processes, enabling you to reduce costs,
-                    increase efficiency, and improve overall performance. Our BPM solutions are designed to help you
-                    stay agile and competitive.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+                <div class="card">
+                    <h4>Software Testing</h4>
+                    <hr />
+                    <p>We provide comprehensive software testing services to ensure your applications are secure,
+                        reliable,
+                        and fully functional. Our rigorous testing methodologies guarantee a smooth and seamless user
+                        experience for your end users.</p>
+                    <div class="more">
+                        <a href="#" onclick="loadPage('testdetail')">Read More...</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <h4>Data Engineering & Analytics</h4>
-                <hr />
-                <p>Maktronix empowers your business by turning data into actionable insights. We design and implement
-                    data pipelines, analytics platforms, and reporting tools that help you make data-driven decisions to
-                    fuel growth and innovation.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Software Testing</h4>
-                <hr />
-                <p>We provide comprehensive software testing services to ensure your applications are secure, reliable,
-                    and fully functional. Our rigorous testing methodologies guarantee a smooth and seamless user
-                    experience for your end users.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Management Consulting</h4>
-                <hr />
-                <p>Our experienced consultants offer strategic advice and practical solutions to help you overcome
-                    business challenges, enhance productivity, and achieve your long-term objectives. We focus on
-                    driving operational excellence across your organization.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+                <div class="card">
+                    <h4>Management Consulting</h4>
+                    <hr />
+                    <p>Our experienced consultants offer strategic advice and practical solutions to help you overcome
+                        business challenges, enhance productivity, and achieve your long-term objectives. We focus on
+                        driving operational excellence across your organization.</p>
+                    <div class="more">
+                        <a href="#" onclick="loadPage('mcdetail')">Read More...</a>
+                    </div>
                 </div>
             </div>
         </main>
@@ -200,102 +200,286 @@
             <h1>Industries</h1>
             <p>At Maktronix, we provide innovative IT solutions across a range of industries, helping businesses
                 optimize operations and embrace digital transformation.</p>
-            <div class="card">
-                <h4>Insurance</h4>
-                <hr />
-                <p>We’ve successfully partnered with clients in Insurance, delivering secure, scalable platforms and
-                    AI-driven solutions for risk assessment and fraud detection.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+            <div class="divshzrntl">
+                <div class="card">
+                    <h4>Insurance</h4>
+                    <hr />
+                    <p>We’ve successfully partnered with clients in Insurance, delivering secure, scalable platforms and
+                        AI-driven solutions for risk assessment and fraud detection.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Banking</h4>
+                    <hr />
+                    <p>In Banking & Financial Services, we specialize in developing secure digital banking platforms,
+                        ensuring regulatory compliance, and enhancing customer experiences.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Education</h4>
+                    <hr />
+                    <p>We support Education institutions by creating digital learning environments and improving
+                        administrative efficiency.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h4>Banking</h4>
-                <hr />
-                <p>In Banking & Financial Services, we specialize in developing secure digital banking platforms,
-                    ensuring regulatory compliance, and enhancing customer experiences.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+            <div class="divshzrntl">
+                <div class="card">
+                    <h4>Government</h4>
+                    <hr />
+                    <p>Our work with Government entities focuses on driving digital innovation, modernizing operations,
+                        and
+                        enhancing citizen services.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Manufacturing</h4>
+                    <hr />
+                    <p>In Manufacturing, we lead the way in smart factory technologies, ERP integration, predictive
+                        maintenance, and supply chain optimization, ensuring businesses operate efficiently in the
+                        Industry
+                        4.0 era.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h4>Telecomms</h4>
+                    <hr />
+                    <p>We offer tailored IT solutions to help telecommunications companies enhance network performance,
+                        optimize infrastructure, and improve customer experience. Our expertise in digital
+                        transformation
+                        enables telecom providers to keep pace with the rapidly evolving demands of the industry.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h4>Education</h4>
-                <hr />
-                <p>We support Education institutions by creating digital learning environments and improving
-                    administrative efficiency.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+            <div class="divshzrntl">
+                <div class="card">
+                    <h4>Healthcare</h4>
+                    <hr />
+                    <p>We are dedicated to transforming the healthcare industry by delivering innovative IT solutions
+                        that
+                        enhance patient care and streamline operations.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <h4>Government</h4>
-                <hr />
-                <p>Our work with Government entities focuses on driving digital innovation, modernizing operations, and
-                    enhancing citizen services.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Manufacturing</h4>
-                <hr />
-                <p>In Manufacturing, we lead the way in smart factory technologies, ERP integration, predictive
-                    maintenance, and supply chain optimization, ensuring businesses operate efficiently in the Industry
-                    4.0 era.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Telecomms</h4>
-                <hr />
-                <p>We offer tailored IT solutions to help telecommunications companies enhance network performance,
-                    optimize infrastructure, and improve customer experience. Our expertise in digital transformation
-                    enables telecom providers to keep pace with the rapidly evolving demands of the industry.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Healthcare</h4>
-                <hr />
-                <p>We are dedicated to transforming the healthcare industry by delivering innovative IT solutions that
-                    enhance patient care and streamline operations.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>FMCG</h4>
-                <hr />
-                <p>In the Fast-Moving Consumer Goods (FMCG) sector, we provide IT solutions that enhance supply chain
-                    management, streamline inventory processes, and boost consumer engagement. Our digital innovations
-                    help FMCG companies respond swiftly to market demands and maintain operational efficiency.</p>
-                <div class="more">
-                    <a href="#">Read More...</a>
+                <div class="card">
+                    <h4>FMCG</h4>
+                    <hr />
+                    <p>In the Fast-Moving Consumer Goods (FMCG) sector, we provide IT solutions that enhance supply
+                        chain
+                        management, streamline inventory processes, and boost consumer engagement. Our digital
+                        innovations
+                        help FMCG companies respond swiftly to market demands and maintain operational efficiency.</p>
+                    <div class="more">
+                        <a href="#">Read More...</a>
+                    </div>
                 </div>
             </div>
         </main>
         <main id="contact">
             <h1>Contact Us</h1>
-            <p>Feel free to reach out through this page!</p>
-            <form>
-                <div>
+            <p>Please use this page to reach out to us.</p>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="d3341d5d-66a6-4864-b734-4a7a457e201a">
+                <div class="name">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
                 </div>
-                <div>
+                <div class="email">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
                 </div>
-                <div>
+                <div class="message">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
                 </div>
                 <div>
                     <button type="submit">Send</button>
                 </div>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             </form>
+        </main>
+
+        <main id="sedetail">
+            <div class="menuhdr"></div>
+            <h1>Software Engineering</h1>
+            <p>We specialize in end-to-end software development, from conceptualization to deployment and ongoing
+                maintenance. Our team of engineers is adept in various programming languages, frameworks, and
+                methodologies, ensuring that we can tackle any software challenge.
+            </p>
+            <p>
+                Custom Software Development: We create bespoke applications that are designed to meet the specific needs
+                of your business.
+            </p>
+            <p>
+                Enterprise Solutions: We design scalable enterprise software that integrates seamlessly with existing
+                systems, enhancing your business processes.
+            </p>
+            <p>
+                Cloud Solutions: We develop cloud-native applications, leveraging the power of cloud computing to offer
+                scalability, flexibility, and cost savings.
+            </p>
+            <p>
+                DevOps Practices: Through continuous integration and delivery (CI/CD), we automate workflows and improve
+                software quality and deployment speed.
+            </p>
+            <div class="more">
+                <a href="#" onclick="loadPage('services')">Back...</a>
+            </div>
+        </main>
+        <main id="badetail">
+            <h1>Business & System Analysis</h1>
+            <p>
+                Our business and system analysis services focus on understanding your business's unique challenges and
+                opportunities, aligning them with technology solutions that drive growth and efficiency.
+            </p>
+            <p>
+                Requirement Gathering: We collaborate closely with stakeholders to gather detailed requirements,
+                ensuring all business objectives are addressed.
+            </p>
+            <p>
+                System Design & Architecture: We design system architectures that are scalable, secure, and
+                cost-efficient, aligned with your business needs.
+            </p>
+            <p>
+                Feasibility Studies: We assess the technical and economic viability of solutions, helping you make
+                informed decisions about investments.
+            </p>
+            <p>
+                Process Mapping: Our analysts model your current processes and identify areas for improvement,
+                streamlining operations and increasing efficiency.
+            </p>
+            <div class="more">
+                <a href="#" onclick="loadPage('services')">Back...</a>
+            </div>
+        </main>
+        <main id="bpmdetail">
+            <h1>Business Process Management</h1>
+            <p>Maktronix offers expertise in optimizing and automating your business processes to improve operational
+                efficiency and reduce costs.</p>
+            <p>
+                Process Optimization: We analyze and re-engineer workflows to eliminate inefficiencies and bottlenecks,
+                leading to higher productivity.
+            </p>
+            <p>
+                Automation Solutions: We implement cutting-edge automation technologies, such as Robotic Process
+                Automation (RPA), to handle repetitive tasks, allowing your workforce to focus on high-value activities.
+            </p>
+            <p>
+                BPM Tools Implementation: We deploy industry-leading BPM software to give you better visibility and
+                control over your processes.
+            </p>
+            <p>
+                Continuous Improvement: We provide ongoing assessments to ensure that your processes evolve with your
+                business and market conditions.
+            </p>
+            <div class="more">
+                <a href="#" onclick="loadPage('services')">Back...</a>
+            </div>
+        </main>
+        <main id="dedetail">
+            <h1>Data Engineering & Analytics</h1>
+            <p>Our management consulting services help organizations navigate complex challenges and capitalize on new
+                opportunities by offering expert advice across several key areas:</p>
+            <p>
+                Strategic Planning: We help you define and execute strategic initiatives that align with your
+                long-term vision and market demands.
+            </p>
+            <p>
+                Change Management: Our consultants guide your organization through transformation initiatives,
+                ensuring smooth transitions with minimal disruption.
+            </p>
+            <p>
+                Operational Excellence: We analyze your current operational frameworks and recommend optimizations to
+                improve efficiency and profitability.
+            </p>
+            <p>
+
+                Risk Management: We help identify risks and provide strategic plans to mitigate them, ensuring
+                business continuity and compliance with regulations.
+            </p>
+            <p>
+            <p>
+                Technology Advisory: We assist in aligning your technology investments with your business strategy,
+                ensuring that you get the best return on your IT spend.
+            </p>
+            <div class="more">
+                <a href="#" onclick="loadPage('services')">Read More...</a>
+            </div>
+        </main>
+        <main id="testdetail">
+            <h1>Software Testing</h1>
+            <p>
+                Maktronix ensures that your software is not only functional but also secure, reliable, and
+                user-friendly. Our software testing services cover every aspect of quality assurance.
+            </p>
+            <p>
+                Functional Testing: We ensure that your software meets all specified requirements and functions as
+                expected.
+            </p>
+            <p>
+                Performance Testing: We assess your system’s performance under different loads and conditions to ensure
+                it can handle high-traffic scenarios.
+            </p>
+            <p>
+                Security Testing: We rigorously test for vulnerabilities, ensuring your system is secure from external
+                threats and data breaches.
+            </p>
+            <p>
+                Automated Testing: Using advanced automation tools, we streamline the testing process to deliver faster
+                and more reliable results.
+            </p>
+            <p>
+            <p>
+                User Acceptance Testing (UAT): We engage your end-users in the testing phase to ensure that the system
+                meets real-world expectations and is ready for deployment.
+            </p>
+            <div class="more">
+                <a href="#" onclick="loadPage('services')">Back...</a>
+            </div>
+        </main>
+        <main id="mcdetail">
+            <h1>Management Consulting</h1>
+            <p>
+                Our data engineering and analytics services are designed to unlock the power of your data, enabling you to
+                make smarter, data-driven decisions.
+            </p>
+            <p>
+                Data Architecture Design:** We design efficient data architectures that ensure the smooth flow and
+                accessibility of data across your organization.
+            </p>
+            <p>
+                ETL Pipelines:** We build Extract, Transform, Load (ETL) pipelines to gather data from multiple sources,
+                clean it, and store it in a centralized system.
+            </p>
+            <p>
+                Big Data Solutions:** We implement solutions that allow you to handle large-scale data sets, unlocking
+                insights that can drive growth and innovation.
+            </p>
+            <p>
+                Advanced Analytics:** Using data visualization tools and statistical models, we provide actionable insights
+                that help inform business decisions.
+            </p>
+            <p>
+            <p>
+                AI & Machine Learning:** We integrate AI and machine learning algorithms into your data workflows, enabling
+                predictive analytics and automation of decision-making processes.
+            </p>
+            <div class="more">
+                <a href="#" onclick="loadPage('services')">Back...</a>
+            </div>
         </main>
     </div>
     <footer>

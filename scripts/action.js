@@ -6,12 +6,24 @@ function loadPage(page) {
     const services = document.getElementById('services');
     const industries = document.getElementById('industry');
     const contact = document.getElementById('contact');
+    const sedetail = document.getElementById('sedetail');
+    const badetail = document.getElementById('badetail');
+    const bpmdetail = document.getElementById('bpmdetail');
+    const dedetail = document.getElementById('dedetail');
+    const testdetail = document.getElementById('testdetail');
+    const mcdetail = document.getElementById('mcdetail');
 
     welcome.style.display = page !== 'welcome' ? 'none' : 'block';
     whyus.style.display = page !== 'whyus' ? 'none' : 'block';
     services.style.display = page !== 'services' ? 'none' : 'block';
     industries.style.display = page !== 'industry' ? 'none' : 'block';
     contact.style.display = page !== 'contact' ? 'none' : 'block';
+    sedetail.style.display = page !== 'sedetail' ? 'none' : 'block';
+    badetail.style.display = page !== 'badetail' ? 'none' : 'block';
+    bpmdetail.style.display = page !== 'bpmdetail' ? 'none' : 'block';
+    dedetail.style.display = page !== 'dedetail' ? 'none' : 'block';
+    testdetail.style.display = page !== 'testdetail' ? 'none' : 'block';
+    mcdetail.style.display = page !== 'mcdetail' ? 'none' : 'block';
 
     // Collapse the menu after a link is clicked
     const navLinks = document.getElementById('nav-links');
